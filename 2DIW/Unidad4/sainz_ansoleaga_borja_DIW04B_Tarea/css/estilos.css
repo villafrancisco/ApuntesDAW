@@ -1,0 +1,242 @@
+/*****
+	* Asignatura: DIW
+    * Alumno: Borja Sainz Ansoleaga
+    * Curso: 2020/21
+    * Tarea: DIW04 - Tarea 4B
+********/
+
+/*
+	ESTILOS PERSONALIZADOS PARA LA PÁGINA WEB
+*/
+
+/*Se establece un color de fondo para el body y una letra tipo Arial.*/
+body{
+	background-color: #f3f4f5;
+	font-family: Arial;
+}
+
+/*Se centra el contenedor general y se establece un margen del 80% para dar respuesta al enunciado.*/
+.contenedor{
+	margin:0 auto;
+	width:80%;
+}
+
+/*Se establece un padding al logo*/
+#logo{
+	padding:0px 15%;
+}
+
+/*Se le da un margen al header de la página por arriba y por abajo*/
+header {
+    margin: 20px 0;
+}
+
+/*El lista del menú horizontal, no tendrá ningún estilo*/
+nav ul{
+	list-style:none;
+}
+
+/*Los elementos de la lista irán flotados a la izquierda y tendrán un cierto padding a los lados, arriba y abajo.*/
+nav li{
+	padding:5px 40px;
+	float:left;
+}
+
+/*Los elementos del menú tendrán los bordes redondeados. Al ser hiperenlaces, no tendrán ningún elemento de decoración.
+  Se centra el texto, se establece un tamaño de letra, se pone a mayúsculas el texto y se da una altura a los hiperenlaces.
+*/
+.menu {
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    padding: 2px;
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+	height:70px;
+}
+
+/*Se establece un padding diferentes para los botones del menú de la cabecera para el móvil.
+Se define una altura específica para las categorías del menú principal (las tres cajas de color principales, antes del footer)*/
+@media only screen and (min-width: 320px) and (max-width: 720px) { 
+	nav li{
+		padding:5px 20px;
+	}
+	
+	.category {
+		height:360px;
+	}
+}
+
+/*Se define una altura específica para las categorías del menú principal (las tres cajas de color principales, antes del footer)*/
+@media only screen and (min-width: 720px){ 
+	.category {
+		height:320px;
+	}
+}
+
+/* Se definen los colores a usar en la página web */
+.azul {
+    background-color: #008cc6;
+}
+
+.naranja {
+    background-color: #ff6914;
+}
+
+.amarillo {
+    background-color: #ffa000;
+}
+
+.verde {
+    background-color: #22c68b;
+}
+
+/*Se establece un fondo gris para el hover de los hiperenlaces.
+  Al pasar el ratón por encima, se marcarán a gris.
+*/
+a:hover {
+    background-color: #cfcfcd;
+}
+
+/*Se le da formato al elemento contenedor de la imagen del banner.*/
+#banner{
+	padding:0px;
+	height:200px;
+	overflow:hidden;
+}
+
+/*Se le da un color de fondo al banner, se redondean los bordes y se genera la sombra inferior de la caja de texto.
+  Se le da un margen inferior al banner y un cierto espacio interior al mismo.
+*/
+.text_banner {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 20px 0px -10px #e0e0e1;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/*Se le da un cierto espacio interior a la caja derecha del banner*/
+.text_banner .right {
+    padding: 25px;
+}
+
+/*Se le da un estílo al título de la caja derecha del banner.*/
+.text_banner .right h1 {
+    color: #008cc6;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/*Se le da un estílo al párrafo de la caja derecha del banner.*/
+.text_banner .right p {
+    margin-bottom: 15px;
+    color: #d6d9e4;
+}
+
+/*Se le da un estílo al hiperenlace de la caja derecha del banner.*/
+.text_banner .right a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    background-color: #008cc6;
+    padding: 12px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/*Se le da un estílo al hover de la caja derecha del banner.
+  Al pasar el ratón por encima del hiperenlace, aparecerá el fondo en gris.
+*/
+.text_banner .right a:hover {
+    background-color: #cfcfcd;
+}
+
+/*Se establece una posición relativa de la categoría para poder establecer la posición absoluta del botón más de la misma*/
+.category {
+	position:relative;
+    padding: 20px;
+    color: #fff;
+    border: 10px solid #f3f4f5;
+	border-radius:30px;
+}
+
+/*Se le da un estilo al título de la categoría.*/
+.category h2 {
+    margin: 20px 0;
+}
+
+/*Se le da un estilo al párrafo de la categoría.*/
+.category p {
+    font-size: 14px;
+}
+
+/*Se le da un estilo al botón más que aparece en la parte inferior derecha de las categorías.
+  Se establece una posición absoluta con respecto al contenedor, porque ya se ha establecido la posición relativa del mismo.
+  se establece un margen con respecto de la derecha de la caja y de la parte baja.
+  Se establece un borde redondo alrededor de la imagen.
+  Se deja un margen con respecto al texto superior.
+*/
+.category .more {
+	position:absolute;
+	bottom:20px;
+	right:20px;
+    float: right;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/*Se ajusta el espacio interior por arriba y abajo del pie de página.
+  Se alinea el texto.
+*/
+footer {
+    background-color: #c4d2dc;
+    padding-top: 15px;
+	padding-bottom: 30px;
+    text-align: center;
+	margin-top:20px;
+}
+
+/*Se establece un hover para los hiperenlaces del pie de página cuando se pase el ratón por encima.*/
+footer a:hover {
+    color: white;
+	background-color:transparent;
+	
+}
+
+/*Se establece un estilo para la lista del pie de página.
+  Se establece una lista sin estilo, se alinea el texto.
+  Se establece display block para conseguir alinear la lista en el centro del pie de página,
+  usando para ello margin auto.
+  Se establece un espacio interior para el elemento de lista.
+*/
+footer ul{
+	list-style:none;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	padding:0px 25%;
+}
+
+/*Los elementos de lista del pie de página, flotarán hacia la izquierda.*/
+footer li{
+	padding:0px;
+	float:left;
+}
+
+/*Los hiperenlaces no tendrán un elemento decorativo.
+  Se alinea el texto al centro y se establecen mayúsculas
+*/
+footer a{
+    text-decoration: none;
+    color: #008cc6;
+    padding: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+

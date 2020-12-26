@@ -1,0 +1,69 @@
+Punto de partida:
+SO Ubuntu Server 20.04 LTS con Apache2 instalado
+
+***************INSTALAR MYSQL*****************:
+	sudo apt install mysql-server
+
+Ahora vamos a ajustar los parámetros de seguridad de acceso al gestor a nuestro gusto:
+
+	sudo mysql_secure_installation
+
+Nos preguntan si queremos configurar VALIDATE PASSWORD PLUGIN
+
+**************El VALIDATE PASSWORD PLUGIN************:
+1- Si la habilitamos, MySQL no aceptará las contraseñan que no cumplan con los criterios especificado.
+2- Si se deja desactivada, seguirá siendo una opción segura, lo único que debermos usar contraseñas únicas y seguras para las credenciales de acceso a las base de datos en MySQL.
+
+En la tarea nos piden que no activemos VALIDATE PASSWORD PLUGIN, luego cunado nos pregunte, nuestra respuesta será "n" o cualquier otra cosa que no sea "y".
+
+A continucación configuramos las credenciales de root de MySQL, con contraseña 'Admin-123'
+
+Una vez finalizada la instalación, comprobamos en la consola que funciona:
+	sudo mysql - root
+No nos va a pedir contraseña porque, por defecto, la validación se hace con unix_socket en lugar de password (lo cambiaremos más adelante).
+
+Y veremos el prompt de mysql, podemos ver que tiene y luego salir:
+	mysql> show databases;
+	mysql> exit
+	
+Vamos a crear un usuario alternativo a root para las conexiones remotas, dejando que solo root pueda acceder de forma local.
+
+mysql> create user 'admin'@'%' identified by 'Admin-123';
+mysql>grant all on *.* to 'admin'@'%';
+
+***********INSTALAR PHP***************:
+
+Instalaremos:
+php
+php-mysql: módulo que permite que php se comunique con mysql
+libapache2-mod-php: módulo para habilitar en Apache la gestión de archivos php.
+
+	sudo apt install php libapache2-mod-php php-mysql
+
+Para ver la versión de php instalada:
+	php -v
+
+**********INSTALAR PHPMYADMIN**************:
+sudo apt install phpmyadmin
+
+En la instalación nos preguntarán por el servidor (dejar el marcado, Apache). Recordamos que la contraseña que usaremos será Admin-123
+
+Para poder usarlo, tenemos que configurar APACHE:
+Crear enlace: 
+	sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+Habilitar la configuración: 
+	sudo a2enconf phpmyadmin.conf
+Recargar Apache: 
+	sudo systemctl reload apache2.service
+***************PROBANDO*********************
+Ahora podemos probar en el navegador que se abre phpmyadmin, especificando la IP de nuestro servidor y desplegando phpmyadmin
+	http://IP/phpmyadmin
+	
+Introducimos las credenciales para mysql y se abrirá el gestor de bases de datos en la herrameinta phpmyadmin, para que podamos administrar MySQL de forma remota.
+
+
+********* MYSQL y USUARIOS ANÓNIMOS ***************************
+
+Por defecto, la instalación de MySQL tiene un usuario anónimo, que permite a cualquiera loguearse en MySQL sin tener una cuenta de usuario creada. El propósito es si queremos probar y hacer la instalación más fluída. Pero deberíamos eliminarlo antes de poner en producción la instalación. 
+
+Por eso, nosotros no hemos habilitado el acceso del usuario anónimo

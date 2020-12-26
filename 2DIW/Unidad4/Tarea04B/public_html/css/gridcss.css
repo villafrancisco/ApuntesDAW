@@ -1,0 +1,178 @@
+/* 	Sistema de regilla GRID 
+*/
+
+/* Estilos Basicos */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Todas las cols al 100% - Movil First 
+*/
+[class*='col-'] {
+	float: left;
+	width: 100%;
+
+	margin: 0;
+}
+
+/* Forzar nueva fila 
+*/
+.fila:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+/* Crear margenes de una caja 
+	es un padding para que no sume ancho
+*/
+.m_r {
+	padding-right: 1em;
+}
+.m_l {
+	padding-left: 1em;
+}
+.m_b {
+	padding-bottom: 2em;
+}
+
+.m_t {
+	padding-top: 2em;
+}
+
+/* Margenes 
+*/
+
+.m-3 {
+	margin-left: 25%;
+}
+
+.m-5 {
+	margin-left: 41.66%;
+}
+
+.m-7 {
+	margin-left: 58.33%;
+}
+.m-8 {
+	margin-left: 66.66%;
+}
+.m-9 {
+	margin-left: 75%;
+}
+.m-10 {
+	margin-left: 83.33%;
+}
+.m-11 {
+	margin-left: 91.66%;
+}
+
+/* 	> Tablets
+ */
+@media only screen and (min-width: 768px) {
+	.m-0 {
+		margin-left: 0;
+	}
+	.col-m-1 {
+		width: 8.33%;
+	}
+	.col-m-2 {
+		width: 16.66%;
+	}
+	.col-m-3 {
+		width: 25%;
+	}
+	.col-m-4 {
+		width: 33.33%;
+	}
+	.col-m-5 {
+		width: 41.66%;
+	}
+	.col-m-6 {
+		width: 50%;
+	}
+	.col-m-7 {
+		width: 58.33%;
+	}
+	.col-m-8 {
+		width: 66.66%;
+	}
+	.col-m-9 {
+		width: 75%;
+	}
+	.col-m-10 {
+		width: 83.33%;
+	}
+	.col-m-11 {
+		width: 91.66%;
+	}
+	.col-m-12 {
+		width: 100%;
+	}
+}
+
+/* 	> PC: 
+*/
+@media only screen and (min-width: 1200px) {
+	.m-1-2 {
+		margin-left: 4.16%;
+	}
+	.m-0 {
+		margin-left: 0;
+	}
+	.m-1 {
+		margin-left: 8.33%;
+	}
+	.m-2 {
+		margin-left: 16.66%;
+	}
+	.m-4 {
+		margin-left: 33.33%;
+	}
+	.m-6 {
+		margin-left: 50%;
+	}
+	.col-1 {
+		width: 8.33%;
+	}
+	.col-2 {
+		width: 16.66%;
+	}
+	.col-3 {
+		width: 25%;
+	}
+	.col-4 {
+		width: 33.33%;
+	}
+	.col-5 {
+		width: 41.66%;
+	}
+	.col-6 {
+		width: 50%;
+	}
+	.col-7 {
+		width: 58.33%;
+	}
+	.col-8 {
+		width: 66.66%;
+	}
+	.col-9 {
+		width: 75%;
+	}
+	.col-10 {
+		width: 83.33%;
+	}
+	.col-11 {
+		width: 91.66%;
+	}
+	.col-12 {
+		width: 100%;
+	}
+}

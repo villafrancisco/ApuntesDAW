@@ -1,0 +1,178 @@
+/*
+FRANCISCO VILLA GONZALEZ
+*/
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+#contenido {
+	background-color: #f3f4f5;
+}
+
+#logo {
+	text-align: center;
+}
+#menu ul {
+	list-style: none;
+}
+#menu ul li {
+	text-align: center;
+	font-size: 10px;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	border-radius: 5px;
+	margin-bottom: 3px;
+}
+#menu ul li a {
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+
+#menu ul li a img {
+	width: 30px;
+}
+#menu #home {
+	background-color: #008cc6;
+}
+#menu #about {
+	background-color: #ff6914;
+}
+#menu #blog {
+	background-color: #ffa000;
+}
+#menu #contact {
+	background-color: #22c68b;
+}
+#menu ul li:hover {
+	background-color: grey !important;
+}
+
+#banner {
+	background-color: white;
+	border-radius: 2px;
+	margin-bottom: 3px;
+	text-align: center;
+}
+
+#banner h2 {
+	color: #008cc6;
+	padding-left: 10px;
+}
+#banner p {
+	color: #c4d2dc;
+	font-size: 14px;
+	padding-left: 10px;
+}
+#banner a {
+	text-decoration: none;
+	background-color: #008cc6;
+	border-radius: 5px;
+	color: white;
+	font-size: 13px;
+	display: block;
+
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+main .cuadro {
+	color: white;
+	border-radius: 15px;
+	margin-bottom: 3px;
+}
+
+main .cuadro img {
+	width: 60px;
+	padding: 10px;
+}
+main .cuadro h2 {
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+main .cuadro p {
+	font-size: 12px;
+	padding-left: 40px;
+	margin-right: 10px;
+}
+main .azul {
+	background-color: #008cc6;
+}
+main .rojo {
+	background-color: #ff6914;
+}
+main .naranja {
+	background-color: #ffa000;
+}
+
+footer ul {
+	text-align: center;
+	list-style: none;
+	background-color: #babbbd;
+}
+footer ul li {
+	display: inline-block;
+	width: 100%;
+}
+footer ul li a {
+	text-decoration: none;
+	color: #008cc6;
+	font-size: 14px;
+	display: block;
+	padding: 10px;
+}
+footer ul li:hover a {
+	color: white;
+}
+
+@media only screen and (min-width: 768px) {
+	#banner div:nth-child(2) {
+		margin-top: 50px;
+	}
+	footer ul li {
+		display: inline-block;
+		width: 100px;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	#contenido {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	header {
+		padding-top: 30px;
+		margin-bottom: 30px;
+	}
+
+	#menu ul li {
+		display: inline-block;
+		width: 70px;
+		margin-left: 22px;
+	}
+
+	#banner {
+		background-color: white;
+		border-radius: 2px;
+		box-shadow: 0px 10px 6px 1px #7e8182;
+		margin-bottom: 25px;
+	}
+	#banner div p {
+		text-align: left;
+	}
+	.boton {
+		width: 80px;
+		margin-left: 40px;
+	}
+	.cuadro {
+		width: 28%;
+	}
+	footer ul {
+		margin-top: 20px;
+	}
+}

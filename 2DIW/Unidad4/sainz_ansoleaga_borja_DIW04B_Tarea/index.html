@@ -1,0 +1,142 @@
+<!--
+	* Asignatura: DIW
+    * Alumno: Borja Sainz Ansoleaga
+    * Curso: 2020/21
+    * Tarea: DIW04 - Tarea 4B
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DIW04 - 4B</title>
+    <!-- Se separa la hoja de estilos general, de la hoja de estilos de rejilla de la página-->
+	<link rel="stylesheet" href="css/rejilla.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<!-- Se establece un contenedor que engloba a todos los elementos y cajas div de la página-->
+	<div class="contenedor">
+		<!-- Se empieza estableciendo el header. Se le Se incluye la clase fila para hacer el efecto limpia con una nueva regla.
+		     La cabecera ocupará el 100% del ancho.
+		-->
+		<header class="fila col-12 col-m-12 col-s-12">
+			<!-- El logo ocupará el 50% del ancho de la cabecera para la versión PC y el 100% para la versión tablet y móvil-->
+			<div id="logo" class="col-6 col-m-12 col-s-12">
+				<img src="img/logo.png" alt="Logo"/>
+			</div>
+			<!-- El navegador ocupará el 50% del ancho de la cabecera para la versión PC y el 100% para la versión tablet y móvil-->
+			<nav class="col-6 col-m-12 col-s-12">
+					<ul>
+						<!-- Los elementos de lista ocuparán un 25% del ancho para la versión PC y Tablet, y un 50% para la versión móvil.-->
+						<li class="col-3 col-m-3 col-s-6">
+							<!-- Los hiperenlaces ocuparán un 100% del ancho para las 3 versiones-->
+							<a class="col-12 col-m-12 col-s-12 menu azul" href="index.html">
+								<img src="img/home.png" alt="Home"><br>
+								Home
+							</a>
+						</li>
+						<!--IDEM-->
+						<li class="col-3  col-m-3 col-s-6">
+							<a class="col-12 col-m-12 col-s-12 menu naranja" href="index.html">
+								<img src="img/about.png" alt="About"><br>
+								About Us
+							</a>
+						</li>
+						<!--IDEM-->
+						<li class="col-3  col-m-3 col-s-6">
+							<a class="col-12 col-m-12 col-s-12 menu amarillo" href="index.html">
+								<img src="img/blog.png" alt="Blog"><br>
+								Blog
+							</a>
+						</li>
+						<!--IDEM-->
+						<li class="col-3  col-m-3 col-s-6">
+							<a class="col-12 col-m-12 col-s-12 menu verde" href="index.html">
+								<img src="img/contact.png" alt="Contact"><br>
+								Contact
+							</a>
+						</li>
+					</ul>
+			</nav>
+		</header>
+		<!-- Se incluye la clase fila en el main para hacer el efecto limpia con una nueva regla-->
+		<main class="fila">
+			<!-- Se establece un col-10 para que el banner tenga un 83.33% de ancho en la versión PC.
+				 En la versión PC, se establece un margen margin-1 con un 8.33%. Que es el que tendrá
+				 a ambos lados, por haber establecido un ancho del 83.33% para el banner.
+				 Se establece un 100% del ancho para la versión móvil y tablet.
+			-->
+			<div class="text_banner fila col-10 margin-1 col-m-12 col-s-12">
+				<!-- Se establece un 50% del ancho para la imagen del banner para la versión PC-->
+				<div id="banner" class="col-6">
+                    <img src="img/banner.jpg" alt="Banner slider">
+                </div>
+				<!-- Se establece un 50% del ancho para el panel derecho del banner para la versión PC-->
+                <div class="col-6 right">
+                    <h1>Welcome</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, aliquid. Sed beatae dolorum
+                        aspernatur quam.</p>
+                    <a href="index.html">Read more</a>
+                </div>
+			</div>
+			<!-- Se establece un ancho del 100% para las tres versiones para la caja que contiene a las categorías.-->
+			<div class="col-12 col-m-12 col-s-12">
+				<!-- Se establece un ancho del 33.33% para cada caja de categoría en la versión PC y del 100% para las versiones tablet y móvil-->
+				<div class="col-4 col-m-12 col-s-12 category azul">
+					<img src="img/grid.png" alt=">Grid">
+                    <h2>Nam dui justo</h2>
+                    <p>Donec cursus, nisi vel volutpat porta, dui ligula cursus nibh, et lobortis tortor velit vitae velit. Fusce tristique, mi at commodo sollicitudin,
+						libero tortor malesuada nulla, id<br>  laoreet odio mauris nec mauris spantis.</p>
+                    <a href="index.html" class="more"><!-- para pnerlo a la derecha y darle un estilo al borde -->
+                        <img src="img/more.png" alt="botón mas">
+                    </a>
+				</div>
+				<!--IDEM-->
+				<div class="col-4 col-m-12 col-s-12 category  naranja">
+				<img src="img/world.png" alt="World">
+                    <h2>Donec pretium</h2>
+                    <p>Nam interdum, purus quis accumsan congue, tellus metus vuutate uma, ac sagittis justo felis ac massa. Ut eget convallis sem. Donec
+					   pharetra et erat vel tempor. Donec pretium,  dolor eu accumsan dapibus.</p>
+                    <a href="index.html" class="more">
+                        <img src="img/more.png" alt="botón mas">
+                    </a>
+				</div>
+				<!--IDEM-->
+				<div class="col-4 col-m-12 col-s-12 category amarillo">
+				<img src="img/child.png" alt="Child">
+                    <h2>Fusce tristique</h2>
+                    <p>Maecenas imperdiet est eget lobortis dictum. Nullam at purus iaculis tortor malesuada imperdiet vitae sed velit. 
+					   Sed ac elementum sapien. Vestibulum laoreet sit amet urna ut bibendum. Mauris at tristique est.</p>
+                    <a href="index.html" class="more">
+                        <img src="img/more.png" alt="botón mas">
+                    </a>
+				</div>
+			</div>
+		</main>
+		<!-- En el pie de página, se establece un ancho del 100% para las 3 versiones y no se incluye la clase fila,
+		     ya que no siguen más elementos HTML por detrás (este es el último)
+	    -->
+		<footer class="col-12 col-m-12 col-s-12">
+			<ul>
+				<!--Se establece un ancho del 25% para la versión PC, 50% para la versión Tablet y 100% para la versión mobile -->
+				<li class="col-3  col-m-6 col-s-12">
+				    <!-- Los hiperenlaces ocuparán un 100% del ancho para las 3 versiones-->
+					<a class="col-12 col-m-12 col-s-12" href="index.html">Home</a>
+				</li>
+				<li class="col-3  col-m-6 col-s-12">
+					<a class="col-12 col-m-12 col-s-12" href="index.html">About us</a>
+				</li>
+				<li class="col-3  col-m-6 col-s-12">
+					<a class="col-12 col-m-12 col-s-12" href="index.html">Blog</a>
+				</li>
+				<li class="col-3  col-m-6 col-s-12">
+					<a class="col-12 col-m-12 col-s-12" href="index.html">Contact</a>
+				</li>
+			</ul>
+		</footer>
+	</div>
+</body>
+</html>
